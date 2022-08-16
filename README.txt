@@ -1,0 +1,1 @@
+Hello, this is the Lost Kids Repo for their first game!
