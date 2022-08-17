@@ -41,3 +41,42 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2630645213
+    locked: 0
+  - name: Background-Detail0
+    uniqueID: 4155093529
+    locked: 0
+  - name: Background-Detail1
+    uniqueID: 1145781473
+    locked: 0
+  - name: Background-Detail2
+    uniqueID: 1125462455
+    locked: 0
+  - name: Background-Detail3
+    uniqueID: 4254928251
+    locked: 0
+  - name: Background-Detail4
+    uniqueID: 3389449415
+    locked: 0
+  - name: Background-Detail5
+    uniqueID: 588334369
+    locked: 0
+  - name: Background-Detail6
+    uniqueID: 580696819
+    locked: 0
+  - name: Player
+    uniqueID: 39251065
+    locked: 0
+  - name: Particles
+    uniqueID: 3892736151
+    locked: 0
+  - name: Objects
+    uniqueID: 1811422325
+    locked: 0
+  - name: Foreground-Detail0
+    uniqueID: 2860154573
+    locked: 0
+  - name: Foreground-Border
+    uniqueID: 1423414311
+    locked: 0
