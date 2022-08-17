@@ -106,3 +106,6 @@ Detective.1.0/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
 Detective.1.0/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset.meta
 Detective.1.0/Assets/Plugins/FMOD/Cache.meta
 Detective.1.0/Assets/Plugins/FMOD/Cache/Editor.meta
+Detective.1.0/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+Detective.1.0/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+Detective.1.0/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist
