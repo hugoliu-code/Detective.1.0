@@ -146,7 +146,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1811422325
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Time: 2
   m_Parameters:
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collidables:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 448
 --- !u!61 &4491845012898279026
 BoxCollider2D:
   m_ObjectHideFlags: 0

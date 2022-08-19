@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HitManager
   layers:
   - Default
   - TransparentFX
@@ -11,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Object
+  - Entity
   - 
   - 
   - 
@@ -70,6 +71,9 @@ TagManager:
     locked: 0
   - name: Particles
     uniqueID: 3892736151
+    locked: 0
+  - name: Entity
+    uniqueID: 334298215
     locked: 0
   - name: Objects
     uniqueID: 1811422325
