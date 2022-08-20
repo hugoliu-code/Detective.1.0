@@ -11,7 +11,7 @@ public class DroneFailsafe : MonoBehaviour
     void Start()
     {
         dest = GameObject.Find("PlayerOffset");
-        play = GameObject.Find("PlayerBody");
+        play = GameObject.Find("PlayerTest");
     }
 
 
