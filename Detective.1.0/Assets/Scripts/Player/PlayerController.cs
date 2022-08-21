@@ -26,17 +26,22 @@ public class PlayerController : MonoBehaviour
     private bool isTouchingGround = false;
     private bool isRolling = false;
     private bool isSwitching = false; //This might be turned public at some point
-    private GameObject currentGunObject;
+    [SerializeField] float switchTime = 1; //how long does it take to switch guns?
+    [SerializeField] int firstGunID = 0;
+    [SerializeField] int secondGunID = 1;
     [SerializeField] int currentGunID = 0;
     [SerializeField] GameObject[] gunList;
     [Header("LayerMasks")]
     [SerializeField] LayerMask groundLayer;
-    
-    #endregion 
+
+    #endregion
+
+    #region Native Unity Functions
     private void Start()
     {
         //Initializing Components
         rb = GetComponent<Rigidbody2D>();
+        InitializeGuns();
     }
     private void Update()
     {
@@ -44,25 +49,48 @@ public class PlayerController : MonoBehaviour
         HorizontalMovement();
         RollMovement();
         VerticalMovement();
-        UpdateCurrentGun();
+        SwitchGun();
     }
-    void ConditionsCheck() 
-    {
-        //Checks Conditions regarding a state a player is in relation to its actions and the environment around it.
-        isTouchingGround = Physics2D.OverlapCircle((Vector2)transform.position + jumpColliderBottomOffset, jumpColliderRadius, groundLayer);
-    }
+    #endregion
 
     #region GunSwitching
-    private void UpdateCurrentGun()
-    {
-        switch (currentGunID)
-        {
-            case 0:
-                break;
-            default:
-                break;
 
+    
+    private void InitializeGuns()
+    {
+        //Activate the first gun gameobject, while setting all other guns as off
+        if(gunList.Length <= firstGunID || gunList.Length <= secondGunID)
+        {
+            Debug.Log("ERROR: the ID of the first or second gun is too large");
         }
+        for(int a = 0; a<gunList.Length; a++)
+        {
+            if (a != firstGunID)
+                gunList[a].SetActive(false);
+            else
+                gunList[a].SetActive(true);
+        }
+    }
+    private void SwitchGun()
+    {
+        //Check for conditions, and then start coroutine to switch guns
+        if(!isSwitching && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(SwitchGunCoroutine());
+        }
+    }
+    IEnumerator SwitchGunCoroutine()
+    {
+        isSwitching = true;
+        gunList[currentGunID].SetActive(false); //deactivates current gun
+        //Here is where I would have to implement how the switching is visually shown
+        yield return new WaitForSeconds(switchTime);
+        if (firstGunID == currentGunID)
+            currentGunID = secondGunID;
+        else
+            currentGunID = firstGunID;
+        gunList[currentGunID].SetActive(true); //activates the new gun
+        isSwitching = false;
     }
     #endregion 
 
@@ -109,8 +137,6 @@ public class PlayerController : MonoBehaviour
     
     #endregion
 
-
-
     #region Vertical Movement
     void VerticalMovement() //Note to self: might remove the fancy hold to jump higher thing
     {
@@ -137,6 +163,12 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    void ConditionsCheck()
+    {
+        //Checks Conditions regarding a state a player is in relation to its actions and the environment around it.
+        isTouchingGround = Physics2D.OverlapCircle((Vector2)transform.position + jumpColliderBottomOffset, jumpColliderRadius, groundLayer);
+    }
 
     void OnDrawGizmos()
     {

@@ -1263,6 +1263,13 @@ MonoBehaviour:
   lowJumpMultiplier: 18.02
   jumpColliderBottomOffset: {x: -0.03, y: 0}
   jumpColliderRadius: 0.15
+  switchTime: 1
+  firstGunID: 0
+  secondGunID: 1
+  currentGunID: 0
+  gunList:
+  - {fileID: 728809161}
+  - {fileID: 1475750756}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -10793,7 +10800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &728809162
 Transform:
   m_ObjectHideFlags: 0
@@ -17917,7 +17924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 100
-  fireRate: 0.2
+  fireRate: 0.01
   bulletSpread: 5
   maxAmmo: 100
   reloadTime: 0
