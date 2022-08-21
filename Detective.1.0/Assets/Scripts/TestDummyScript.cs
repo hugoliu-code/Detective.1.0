@@ -15,7 +15,7 @@ public class TestDummyScript : MonoBehaviour
     {
         if (data.receiver.Equals(this.gameObject))
         {
-            timesHit++;
+            timesHit+= data.damage;
         }
     }
 

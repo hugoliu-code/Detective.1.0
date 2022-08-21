@@ -14,6 +14,7 @@ public class GunController : MonoBehaviour
     private int currentAmmo;
     private float nextAvailableReloadTime = 0;
     private float nextAvailableFireTime = 0;
+    [SerializeField] AttackData attackData;
     [Space(2)]
     [Header("Object References")]
     [SerializeField] GameObject normalBullet;
@@ -62,7 +63,7 @@ public class GunController : MonoBehaviour
             //Generating the Bullet
             GameObject bullet = Instantiate(normalBullet, gunTipIndicator.position, Quaternion.Euler(0,0,0));
             bullet.GetComponent<Rigidbody2D>().velocity = (worldPosMouseWithSpread - gunTipIndicator.position).normalized * bulletSpeed;
-           
+            bullet.GetComponent<BulletScript>().attackData = attackData;
 
             //Screenshake
             //gm.screenShake.SmallShake();

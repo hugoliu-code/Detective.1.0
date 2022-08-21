@@ -25,8 +25,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpColliderRadius;
     private bool isTouchingGround = false;
     private bool isRolling = false;
+    private bool isSwitching = false; //This might be turned public at some point
+    private GameObject currentGunObject;
+    [SerializeField] int currentGunID = 0;
+    [SerializeField] GameObject[] gunList;
     [Header("LayerMasks")]
     [SerializeField] LayerMask groundLayer;
+    
     #endregion 
     private void Start()
     {
@@ -39,6 +44,7 @@ public class PlayerController : MonoBehaviour
         HorizontalMovement();
         RollMovement();
         VerticalMovement();
+        UpdateCurrentGun();
     }
     void ConditionsCheck() 
     {
@@ -46,8 +52,19 @@ public class PlayerController : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle((Vector2)transform.position + jumpColliderBottomOffset, jumpColliderRadius, groundLayer);
     }
 
+    #region GunSwitching
+    private void UpdateCurrentGun()
+    {
+        switch (currentGunID)
+        {
+            case 0:
+                break;
+            default:
+                break;
 
-
+        }
+    }
+    #endregion 
 
     #region Horizontal Movement
     void HorizontalMovement()
