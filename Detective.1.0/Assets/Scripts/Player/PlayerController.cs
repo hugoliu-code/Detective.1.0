@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region Variables
+    //Native Components on the same object as this script =======================================
     [Header("Components")]
     Rigidbody2D rb;
+
+    //Stats concerning horizontal movement ======================================================
     [Space(2)]
     [Header("Horizontal Movement")]
     [SerializeField] float runSpeed;
@@ -14,26 +17,48 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float rollSpeed;
     [SerializeField] float rollDelay;
     private float nextAvailableRollTime = 0;
+
+    //Stats concerning vertical movement ========================================================
     [Space(2)]
     [Header("Vertical Movement")]
     [SerializeField] float jumpSpeed;
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 2;
+
+    //States the player might be in =============================================================
     [Space(2)]
     [Header("Conditions")]
     [SerializeField] Vector2 jumpColliderBottomOffset;
     [SerializeField] float jumpColliderRadius;
     private bool isTouchingGround = false;
-    private bool isRolling = false;
-    private bool isSwitching = false; //This might be turned public at some point
+    public bool isRolling = false;
+    public bool isSwitching = false; //This might be turned public at some point
+
+    //Variables concerning gun switching ========================================================
+    [Space(2)]
+    [Header("Gun Switching")]
     [SerializeField] float switchTime = 1; //how long does it take to switch guns?
-    [SerializeField] int firstGunID = 0;
-    [SerializeField] int secondGunID = 1;
-    [SerializeField] int currentGunID = 0;
+    [SerializeField] int firstGunID = 0; //index location of the first gun
+    [SerializeField] int secondGunID = 1; //index location of the second gun
+    [SerializeField] int currentGunID = 0; //index location of the current gun to use
     [SerializeField] GameObject[] gunList;
+
+    //Layermasks ================================================================================
+    [Space(2)]
     [Header("LayerMasks")]
     [SerializeField] LayerMask groundLayer;
 
+    //Children Objects ==========================================================================
+    [Space(2)]
+    [Header("Child Objects")]
+    [SerializeField] Animator playerSprite;
+
+    //Animation States ==========================================================================
+    private string AnimIdle = "Idle";
+    private string AnimRun = "Run";
+    private string AnimRoll = "Roll";
+    private string AnimJump = "Jump";
+    private string AnimFall = "Fall";
     #endregion
 
     #region Native Unity Functions
@@ -50,13 +75,14 @@ public class PlayerController : MonoBehaviour
         RollMovement();
         VerticalMovement();
         SwitchGun();
+        AnimationController();
     }
     #endregion
 
     #region GunSwitching
 
     
-    private void InitializeGuns()
+    private void InitializeGuns() 
     {
         //Activate the first gun gameobject, while setting all other guns as off
         if(gunList.Length <= firstGunID || gunList.Length <= secondGunID)
@@ -164,6 +190,29 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    void AnimationController()
+    {
+        if (isRolling)
+        {
+            playerSprite.Play(AnimRoll);
+        }
+        else if(!isTouchingGround && rb.velocity.y >= 0.1f)
+        {
+            playerSprite.Play(AnimJump);
+        }
+        else if(!isTouchingGround && rb.velocity.y <= -0.1f)
+        {
+            playerSprite.Play(AnimFall);
+        }
+        else if(Mathf.Abs(rb.velocity.x) >= 0.1f)
+        {
+            playerSprite.Play(AnimRun);
+        }
+        else
+        {
+            playerSprite.Play(AnimIdle);
+        }
+    }
     void ConditionsCheck()
     {
         //Checks Conditions regarding a state a player is in relation to its actions and the environment around it.

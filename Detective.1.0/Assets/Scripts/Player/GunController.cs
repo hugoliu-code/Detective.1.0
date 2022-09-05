@@ -20,6 +20,7 @@ public class GunController : MonoBehaviour
     [SerializeField] GameObject normalBullet;
     [SerializeField] Transform gunTipIndicator;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject sprite;
 
     #endregion
     private void Start()
@@ -38,10 +39,18 @@ public class GunController : MonoBehaviour
          * Then Draw a raycast to simulate shooting
          * Then Call coroutine to draw the tracer
          */
+        if (player.GetComponent<PlayerController>().isRolling)
+        {
+            sprite.SetActive(false);
+        }
+        else
+        {
+            sprite.SetActive(true);
+        }
         if (Input.GetKey(KeyCode.N)) 
         {
             //IF not enough time has passed, return
-            if (Time.time < nextAvailableFireTime || currentAmmo <= 0)
+            if (Time.time < nextAvailableFireTime || currentAmmo <= 0 || player.GetComponent<PlayerController>().isRolling)
             {
                 return;
             }
