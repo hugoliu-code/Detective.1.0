@@ -10836,6 +10836,7 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: 6cf72dbae1b0c3942870e44c9cfa1c8e, type: 2}
   normalBullet: {fileID: 5617363719529519307, guid: e0bd329091ed8394e8506be9c4188878, type: 3}
   gunTipIndicator: {fileID: 1545588717}
+  player: {fileID: 121654923}
 --- !u!1 &779764405
 GameObject:
   m_ObjectHideFlags: 0
@@ -17931,6 +17932,7 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: 2c893b4dec608994e8dcc60433e4b69e, type: 2}
   normalBullet: {fileID: 5617363719529519307, guid: e0bd329091ed8394e8506be9c4188878, type: 3}
   gunTipIndicator: {fileID: 1545802298}
+  player: {fileID: 121654923}
 --- !u!1 &1477312327
 GameObject:
   m_ObjectHideFlags: 0
