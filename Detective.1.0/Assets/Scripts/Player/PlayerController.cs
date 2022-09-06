@@ -196,11 +196,11 @@ public class PlayerController : MonoBehaviour
         {
             playerSprite.Play(AnimRoll);
         }
-        else if(!isTouchingGround && rb.velocity.y >= 0.1f)
+        else if(!isTouchingGround && rb.velocity.y >= 0f)
         {
             playerSprite.Play(AnimJump);
         }
-        else if(!isTouchingGround && rb.velocity.y <= -0.1f)
+        else if(!isTouchingGround && rb.velocity.y < 0f)
         {
             playerSprite.Play(AnimFall);
         }
