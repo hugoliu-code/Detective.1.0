@@ -1,7 +1,52 @@
 fileFormatVersion: 2
 guid: 8819172347d91fc4d951b4c9adebf850
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3239609194581326373
+    second: Sewer-Enemy-Basic-GloryKill1Player_0
+  - first:
+      213: 6151592364712303621
+    second: Sewer-Enemy-Basic-GloryKill1Player_1
+  - first:
+      213: 3028602259219176856
+    second: Sewer-Enemy-Basic-GloryKill1Player_2
+  - first:
+      213: -8652686567117178715
+    second: Sewer-Enemy-Basic-GloryKill1Player_3
+  - first:
+      213: 8788183039994889031
+    second: Sewer-Enemy-Basic-GloryKill1Player_4
+  - first:
+      213: -985913098112942977
+    second: Sewer-Enemy-Basic-GloryKill1Player_5
+  - first:
+      213: 2182347317948230700
+    second: Sewer-Enemy-Basic-GloryKill1Player_6
+  - first:
+      213: 1337614130593942786
+    second: Sewer-Enemy-Basic-GloryKill1Player_7
+  - first:
+      213: -4083923939514506537
+    second: Sewer-Enemy-Basic-GloryKill1Player_8
+  - first:
+      213: -4311467240389453635
+    second: Sewer-Enemy-Basic-GloryKill1Player_9
+  - first:
+      213: -6471049791385218637
+    second: Sewer-Enemy-Basic-GloryKill1Player_10
+  - first:
+      213: 2892841121976693529
+    second: Sewer-Enemy-Basic-GloryKill1Player_11
+  - first:
+      213: 5531462921093254175
+    second: Sewer-Enemy-Basic-GloryKill1Player_12
+  - first:
+      213: 7373284133186551871
+    second: Sewer-Enemy-Basic-GloryKill1Player_13
+  - first:
+      213: -3521345681346294252
+    second: Sewer-Enemy-Basic-GloryKill1Player_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +146,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52afb16f56765fc20800000000000000
+      internalID: 3239609194581326373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c9ea5c9a8de5550800000000000000
+      internalID: 6151592364712303621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d54b265b1c70a20800000000000000
+      internalID: 3028602259219176856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8bf2e396b7be780800000000000000
+      internalID: -8652686567117178715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7430200c9e5e5f970800000000000000
+      internalID: 8788183039994889031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cb297c2455152f0800000000000000
+      internalID: -985913098112942977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ca4d6b251494e10800000000000000
+      internalID: 2182347317948230700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_7
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d489cf6f8209210800000000000000
+      internalID: 1337614130593942786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2268780dcf257c0800000000000000
+      internalID: -4083923939514506537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_9
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db85ad353679a24c0800000000000000
+      internalID: -4311467240389453635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_10
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b15e94ff763236a0800000000000000
+      internalID: -6471049791385218637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_11
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913301b6caf652820800000000000000
+      internalID: 2892841121976693529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_12
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c02044834b3cc40800000000000000
+      internalID: 5531462921093254175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_13
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30cb929ada235660800000000000000
+      internalID: 7373284133186551871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewer-Enemy-Basic-GloryKill1Player_14
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e8ffb72caa12fc0800000000000000
+      internalID: -3521345681346294252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
