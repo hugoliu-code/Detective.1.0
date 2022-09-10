@@ -12,7 +12,7 @@ public class GunController : MonoBehaviour
     [SerializeField] int maxAmmo = 10;
     [SerializeField] float reloadTime; //how long it takes to reload
     private int currentAmmo;
-    private float nextAvailableReloadTime = 0;
+    //private float nextAvailableReloadTime = 0;
     private float nextAvailableFireTime = 0;
     [SerializeField] AttackData attackData;
     [Space(2)]

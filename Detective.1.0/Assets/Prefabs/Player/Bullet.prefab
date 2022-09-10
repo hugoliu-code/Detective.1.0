@@ -146,7 +146,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1811422325
-  m_SortingLayer: 12
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Time: 2
   m_Parameters:
@@ -157,7 +157,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.041420978
+        value: 0.19185738
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -165,8 +165,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.30475008
-        value: 0
+        time: 0.34234774
+        value: 0.07080078
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   collidables:
     serializedVersion: 2
     m_Bits: 448
+  attackData: {fileID: 0}
 --- !u!61 &4491845012898279026
 BoxCollider2D:
   m_ObjectHideFlags: 0

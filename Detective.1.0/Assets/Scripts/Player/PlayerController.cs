@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     //States the player might be in =============================================================
     [Space(2)]
     [Header("Conditions")]
+    public bool isGloryKilling = false;
     [SerializeField] Vector2 jumpColliderBottomOffset;
     [SerializeField] float jumpColliderRadius;
     private bool isTouchingGround = false;
@@ -51,7 +52,9 @@ public class PlayerController : MonoBehaviour
     //Children Objects ==========================================================================
     [Space(2)]
     [Header("Child Objects")]
-    [SerializeField] Animator playerSprite;
+    [SerializeField] SpriteRenderer sprite;
+    [SerializeField] Animator anim;
+    [SerializeField] GameObject GunControllerObject;
 
     //Animation States ==========================================================================
     private string AnimIdle = "Idle";
@@ -75,9 +78,28 @@ public class PlayerController : MonoBehaviour
         RollMovement();
         VerticalMovement();
         SwitchGun();
+        GloryKillUpdate();
         AnimationController();
+        
     }
     #endregion
+
+    public void GloryKillUpdate()
+    {
+        //should make the player sprite clear
+        if (isGloryKilling)
+        {
+            //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation; 
+            sprite.color = Color.clear;
+            GunControllerObject.SetActive(false);
+        }
+        else
+        {
+            //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            sprite.color = Color.white;
+            GunControllerObject.SetActive(true);
+        }
+    }
 
     #region GunSwitching
 
@@ -123,7 +145,7 @@ public class PlayerController : MonoBehaviour
     #region Horizontal Movement
     void HorizontalMovement()
     {
-        if (isRolling)
+        if (isRolling || isGloryKilling)
         {
             return;
         }
@@ -146,6 +168,10 @@ public class PlayerController : MonoBehaviour
     }
     void RollMovement()
     {
+        if (isGloryKilling)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.S) && Time.time > nextAvailableRollTime && isTouchingGround)
         {
             nextAvailableRollTime = Time.time + rollDelay + rollTime;
@@ -194,23 +220,23 @@ public class PlayerController : MonoBehaviour
     {
         if (isRolling)
         {
-            playerSprite.Play(AnimRoll);
+            anim.Play(AnimRoll);
         }
         else if(!isTouchingGround && rb.velocity.y >= 0f)
         {
-            playerSprite.Play(AnimJump);
+            anim.Play(AnimJump);
         }
         else if(!isTouchingGround && rb.velocity.y < 0f)
         {
-            playerSprite.Play(AnimFall);
+            anim.Play(AnimFall);
         }
         else if(Mathf.Abs(rb.velocity.x) >= 0.1f)
         {
-            playerSprite.Play(AnimRun);
+            anim.Play(AnimRun);
         }
         else
         {
-            playerSprite.Play(AnimIdle);
+            anim.Play(AnimIdle);
         }
     }
     void ConditionsCheck()
