@@ -5,6 +5,7 @@ using System;
 public class TestDummyScript : MonoBehaviour
 {
     [SerializeField] int timesHit;
+    [SerializeField] FlashScript flash;
     HitManager hm;
     void Start()
     {
@@ -16,6 +17,7 @@ public class TestDummyScript : MonoBehaviour
         if (data.receiver.Equals(this.gameObject))
         {
             timesHit+= data.damage;
+            flash.Flash(GetComponent<SpriteRenderer>(), 0.05f);
         }
     }
 
